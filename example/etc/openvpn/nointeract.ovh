@@ -1,0 +1,3 @@
+client-config /etc/openvpn/ccd/
+ddnsinfo 1.2.3.4 ovpnupdate UO94XLwT87DRaKT25k+AGw==
+config nointeract.conf

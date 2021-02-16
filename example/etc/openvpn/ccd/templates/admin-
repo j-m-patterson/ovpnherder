@@ -1,0 +1,9 @@
+push "route 192.168.0.0 255.255.0.0"
+# admin-carol and admin-dave will have firewall access as per the Admin chain
+#FWGroup Admin
+# they can only connect from certain subnets
+#IPSourceAllowed 8.0.0.0/8
+#IPSourceAllowed 9.0.0.0/8
+#IPSourceAllowed 10.0.0.0/8
+# they will be available at admin-carol.vpn.example.com and admin-dave.vpn.example.com
+#DDNSZone vpn.example.com

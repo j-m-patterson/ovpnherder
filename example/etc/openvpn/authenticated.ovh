@@ -1,0 +1,5 @@
+client-config /etc/openvpn/ccd/
+ldapuri ldaps://ldap.example.com/
+ldapbasedn dc=example,dc=com
+ddnsinfo 1.2.3.4 ovpnupdate UO94XLwT87DRaKT25k+AGw==
+config authenticated.conf

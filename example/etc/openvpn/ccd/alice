@@ -1,0 +1,13 @@
+# Alice has a static IP
+ifconfig-push 192.168.3.5 192.168.3.6
+push "route 192.168.0.0 255.255.0.0"
+# Alice has an OTP token for MFA
+#TOTPKey P2BSTMV43Q4IJTDHATNT2ZHYH6NIYPAU
+# alice is an admin, so she has access to all networks via the Admin fwgroup
+#FWGroup Admin
+# Alice can only connect from certain subnets
+#IPSourceAllowed 8.0.0.0/8
+#IPSourceAllowed 9.0.0.0/8
+#IPSourceAllowed 10.0.0.0/8
+# Alice's computer should be available at alice.vpn.example.com
+#DDNSZone vpn.example.com

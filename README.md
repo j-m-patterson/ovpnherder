@@ -19,7 +19,7 @@ If you have a lot of clients with identical ccd files and similar names (think u
 
 ### MFA
 
-when authenticating, ovh optionally uses the certificates presented, the existence of a ccd file or template, LDAP authentication, and a TOTP. The LDAP configuration is given in the ccd or template, meaning that you can have different clients authenticate against different servers. The totp key is also stored in the ccd, and is only used on initial connections, not on reauth (meaning that you neither have to put in a new OTP every reneg-sec, nor turn off renegotiation). OTP's can be provided either at the end of a password, or via SCRV1.
+when authenticating, ovh optionally uses the certificates presented, the existence of a ccd file or template, LDAP authentication, and a TOTP. The LDAP configuration is given in the server config, meaning that you can have different openvpn instances authenticate against different servers. The totp key is stored in the ccd, and is only used on initial connections, not on reauth (meaning that you neither have to put in a new OTP every reneg-sec, nor turn off renegotiation). OTP's can be provided either at the end of a password, or via SCRV1.
 
 TODO: replace the LDAP authentication with a way to specify a specific PAM service file.
 
@@ -46,6 +46,7 @@ TODO: better packaging.
 * make sure that all of your openvpn config files contain a "management" directive.
 * add in "management-client-auth" to your openvpn config files
 * if you will not be using passwords to authenticate, but want other features, add "auth-user-pass-optional" (openvpn doesn't provide as much information to the management interface if it doesn't think there's going to be authentication happening)
+* don't use client-config-dir in the openvpn config, that should be in the ovh config file.
 * start your openvpn services
 * start openvpnherder
 

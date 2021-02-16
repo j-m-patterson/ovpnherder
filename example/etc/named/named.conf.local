@@ -1,0 +1,11 @@
+key ovpnupdate {
+  algorithm hmac-md5;
+  secret "UO94XLwT87DRaKT25k+AGw==";
+};
+
+zone "vpn.example.com" IN {
+        type master;
+        file "/etc/bind/example.com/example.com.zone";
+        notify no;
+        allow-update { key ovpnupdate; };
+};

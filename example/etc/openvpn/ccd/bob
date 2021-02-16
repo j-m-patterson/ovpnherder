@@ -1,0 +1,7 @@
+# Bob has a home network with resources on it that need routing to.
+iroute 192.168.4.0 255.255.255.0
+push "route 192.168.0.0 255.255.0.0"
+# Bob uses an OTP key
+#TOTPKey TLIXV2Q632HTUTQCTFPHDFFPVQVXW7S7
+# Bob's system will be available at bob.vpn.example.com
+#DDNSZone vpn.example.com
