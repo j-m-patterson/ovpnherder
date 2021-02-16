@@ -10,7 +10,7 @@ The original purpose of this project was to help distribute iroute and ifconfig-
 
 ### route updates
 
-As it authenticates clients, the application will track iroute and ifconfig-push statements. It will then push these routes out via RIPv2 to localhost, where a listening RIPv2 process (such as [Quagga](https://quagga.net) ) can receive them for inserton into the local routing table and/or redistribution into other routing protocols.
+As it authenticates clients, the application will track iroute and ifconfig-push statements. It will then push these routes out via RIPv2 to localhost, where a listening RIPv2 process (such as [Quagga](https://quagga.net) ) can receive them for insertion into the local routing table and/or redistribution into other routing protocols.
 > As a note, it should also be possible to send these routing updates out on an external interface, but that is more complicated and probably less useful. It would require that the process figure out the interface address in order to send out RIP broadcasts from the right IP and to the right broadcast address, which shouldn't be particularly hard. But in order for the dynamic iroutes to be useful, they would also need to be inserted into the local routing table. It seemed much more complicated to write that code than to simply insist on a routing daemon listening for RIP on localhost.
 
 ### ccd templates
@@ -55,7 +55,7 @@ Right now, the best contribution is trying it out and seeing if it works for you
 
 ## License
 
-Released under [GPLv3](LICENSE.md)
+Released under [GPLv3](LICENSE)
 
 ## Contact
 
