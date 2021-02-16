@@ -1,0 +1,13 @@
+[Unit]
+Description=ovpnherder OpenVPN management app
+After=openvpn.service
+
+[Service]
+EnvironmentFile=-/etc/default/ovpnherder
+ExecStart=/usr/sbin/ovpnherder $OVPNHERDER_OPTS
+ExecReload=/bin/kill -HUP $MAINPID
+KillMode=process
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
